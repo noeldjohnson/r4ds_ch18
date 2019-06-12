@@ -1,6 +1,6 @@
 # Chapter 18: Model Basics with modelr
 
-setwd("/Users/noeljohnson/Dropbox/R Course/r4ds")
+setwd("/Users/noeljohnson/Dropbox/R Course/Learn_Git/R4ds_ch18")
 
 library(tidyverse)
 library(modelr)
