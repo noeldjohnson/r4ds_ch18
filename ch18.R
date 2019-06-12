@@ -1,6 +1,6 @@
 # Chapter 18: Model Basics with modelr
 
-setwd("/Users/noeljohnson/Dropbox/R Course/r4ds")
+setwd("/Users/noeljohnson/Dropbox/R Course/Learn_Git/R4ds_ch18")
 
 library(tidyverse)
 library(modelr)
@@ -9,10 +9,12 @@ library(stargazer)
 library(jtools)
 options(na.action = na.warn)
 
+head(sim1)
+skim(sim1)
+cor(sim1)
 
 ggplot(sim1, aes(x, y)) +
   geom_point()
-skim(sim1)
 
 models <- tibble(
   a1 = runif(1000, -20, 40),
