@@ -7,6 +7,7 @@ library(modelr)
 library(skimr)
 library(stargazer)
 library(jtools)
+library(viridis)
 options(na.action = na.warn)
 
 head(sim1)
@@ -14,12 +15,18 @@ skim(sim1)
 cor(sim1)
 
 ggplot(sim1, aes(x, y)) +
-  geom_point()
+  geom_hex() +
+  scale_fill_viridis()
 
 models <- tibble(
   a1 = runif(1000, -20, 40),
   a2 = runif(1000, -5, 5)
 )
+
+head(models)
+skim(models)
+hist(models$a1)
+hist(models$a2)
 
 ggplot(sim1, aes(x, y)) +
   geom_abline(
